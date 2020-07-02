@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// Route::get('form','AuthController@form');
+// Route::post('saveform','AuthController@save');
 
 Route::get('/','homeController@index');
-
-Route::get('form','AuthController@form');
-Route::post('saveform','AuthController@save');
+Route::get('/datatable',function(){
+    return view('table/datatable');
+});
